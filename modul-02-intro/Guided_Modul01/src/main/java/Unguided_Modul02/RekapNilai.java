@@ -6,14 +6,12 @@ public class RekapNilai {
         // Deklarasi Konstanta KKM 
         final double KKM = 75.0;
 
-        // Array 1 Dimensi (String) untuk nama mahasiswa
-        String[] namaMahasiswa = {"Andi", "Budi", "Citra"};
+        String[] namaMahasiswa = {"Indy", "Balqis", "Isna"};
 
-        // Array 2 Dimensi Rectangular (double) untuk nilai Modul 1 & Modul 2
         double[][] nilaiModul = {
-            {80.0, 85.0}, // Andi
-            {70.0, 65.0}, // Budi
-            {90.0, 90.0}  // Citra
+            {80.0, 85.0}, // Indy
+            {70.0, 65.0}, // Balqis
+            {90.0, 90.0}  // Isna
         };
 
         // Output
@@ -21,15 +19,12 @@ public class RekapNilai {
         System.out.println("KKM: " + KKM);
         System.out.println();
 
-        // Perulangan (for) untuk memproses tiap mahasiswa
         for (int i = 0; i < namaMahasiswa.length; i++) {
             double modul1 = nilaiModul[i][0];
             double modul2 = nilaiModul[i][1];
 
-            // Menghitung rata-rata
             double rataRata = (modul1 + modul2) / 2;
 
-            // Percabangan (if-else) evaluasi status kelulusan
             String status;
             if (rataRata >= KKM) {
                 status = "LULUS";
